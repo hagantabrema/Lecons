@@ -1,0 +1,193 @@
+/*=============== GOOGLE FONT =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 30px;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/*=============== HEADER =============== */
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 -1px 4px rgb(0 0 0 / 15%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.nav_list {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav_link {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav_link:hover {
+    color: rgb(184, 184, 184);
+}
+
+/*=============== HOME =============== */
+.home_container {
+    background-color: black;
+    grid-template-columns: 1fr 1fr;
+    height: max-content;
+}
+
+.home_left {
+    width: 50%;
+    place-self: center;
+}
+
+.home_right {
+    width: 50%;
+    place-self: center;
+}
+
+.home_title,
+.home_subtitle {
+    color: white;
+}
+
+.home_title {
+    font-size: 35px;
+}
+
+.home_subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.shopping_button {
+    color: black;
+    padding: 20px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.shopping_button:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.3s;
+}
+
+.shoes_picture {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/*=============== PORTFOLIO =============== */
+.portfolio_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio_item {
+    text-align: center;
+}
+
+/*=============== ABOUT =============== */
+.about_container {
+    background-color: black;
+}
+
+.about_title,
+.about_article {
+    color: white;
+    text-align: center;
+}
+
+.about_title {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/*=============== CONTACT =============== */
+.contact_title,
+.contact_data,
+.contact_subtitle {
+    text-align: center;
+}
+
+.contact_title {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.contact_subtitle {
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/*=============== FOOTER =============== */
+.footer_container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer_list {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer_item {
+    margin: auto;
+}
+
+.footer_link {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer_link:hover {
+    color: rgb(184, 184, 184);
+}
