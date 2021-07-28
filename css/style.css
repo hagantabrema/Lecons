@@ -25,12 +25,12 @@ a {
 
 .container {
     padding: 30px;
+    width: 100%;
 }
 
 .grid {
     display: grid;
 }
-
 
 /*=============== HEADER =============== */
 header {
@@ -64,6 +64,21 @@ nav {
 
 .nav_link:hover {
     color: rgb(184, 184, 184);
+    transition: 0.3s;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 }
 
 /*=============== HOME =============== */
@@ -111,7 +126,7 @@ nav {
 }
 
 .shoes_picture {
-    width: 350px;
+    width: 100%;
     height: auto;
     border-radius: 50%;
 }
@@ -179,7 +194,7 @@ nav {
 }
 
 .footer_item {
-    margin: auto;
+    margin: auto 20px;
 }
 
 .footer_link {
@@ -190,4 +205,63 @@ nav {
 
 .footer_link:hover {
     color: rgb(184, 184, 184);
+    transition: 0.3s;
+}
+
+/*=============== RESPONSIVE =============== */
+@media (max-width: 710px) {
+    .nav_list {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav_list.active {
+        left: 0;
+    }
+
+    .nav_item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .home_container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "home_right"
+            "home_left";
+    }
+
+    .home_left {
+        text-align: center;
+    }
+
+    .home_right {
+        margin-top: 40px;
+    }
 }
